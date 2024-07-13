@@ -110,6 +110,9 @@
         }
         .has-text-align-justify{text-align:justify;}
     </style>
+    <style id="jetpack-block-button-inline-css">
+        .amp-wp-article .wp-block-jetpack-button{color:#fff}.wp-block-jetpack-button:not(.is-style-outline) button{border:none}
+    </style>
     <style id="block-style-variation-styles-inline-css">
         :root :where(.wp-block-image.is-style-rounded--9fc6116d4e704ba4120ce5075af669b6 img,.wp-block-image.is-style-rounded--9fc6116d4e704ba4120ce5075af669b6  .wp-block-image__crop-area,.wp-block-image.is-style-rounded--9fc6116d4e704ba4120ce5075af669b6  .components-placeholder){border-radius: var(--wp--preset--spacing--20);}
     </style>
@@ -159,6 +162,9 @@
             z-index: 100000;
         }
     </style>
+    <link crossorigin="anonymous" rel="stylesheet" id="all-css-34-1"
+          href="https://s0.wp.com/wp-content/mu-plugins/jetpack-plugin/moon/jetpack_vendor/automattic/jetpack-forms/dist/contact-form/css/grunion.css?m=1715858256i&amp;cssminify=yes"
+          type="text/css" media="all">
     <link crossorigin="anonymous" rel="stylesheet" id="all-css-42-1"
           href="https://s0.wp.com/_static/??-eJx9jUEKwzAMBD9UVQkYfCp9i+2IRCWyjSWT79dtIKfSi1hJO7t4VEglG2VD6VD3vnJWDItwhhgaHjUVgWu/J9UbMuZiPDi9xPn4nZZKo3GXGuzjEFo40E4ybP+wszrG2kgVxhTuArYN8Fv3lMfsZ+8mN3n3egMPi0qQ&amp;cssminify=yes"
           type="text/css" media="all">
@@ -247,11 +253,85 @@
 
         <!-- Тело -->
         <div style="height:var(--wp--preset--spacing--30)" aria-hidden="true" class="wp-block-spacer"></div>
-        <form th:action="@{/login}" method="post">
-            <div><label> User Name : <input type="text" name="username"/> </label></div>
-            <div><label> Password: <input type="password" name="password"/> </label></div>
-            <div><input type="submit" value="Вход"/></div>
-        </form>
+        <div class="wp-block-group has-global-padding is-layout-constrained wp-container-core-group-is-layout-21 wp-block-group-is-layout-constrained">
+            <h2 class="wp-block-heading alignwide has-text-align-center" style="margin-top:0;margin-bottom:0">Вход</h2>
+
+
+            <div style="height:var(--wp--preset--spacing--20)" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+            <div data-test="contact-form" id="contact-form-block-template-canvas"
+                 class="wp-block-jetpack-contact-form-container "
+                 style="--jetpack--contact-form--primary-color: rgb(17, 17, 17); --jetpack--contact-form--background-color: rgb(249, 249, 249); --jetpack--contact-form--text-color: rgb(0, 0, 0); --jetpack--contact-form--border: 0.888889px solid rgb(140, 143, 148); --jetpack--contact-form--border-color: rgb(140, 143, 148); --jetpack--contact-form--border-size: 0.888889px; --jetpack--contact-form--border-style: solid; --jetpack--contact-form--border-radius: 0px; --jetpack--contact-form--input-background: rgb(255, 255, 255); --jetpack--contact-form--input-background-fallback: rgb(255, 255, 255); --jetpack--contact-form--input-padding: 16px; --jetpack--contact-form--input-padding-top: 16px; --jetpack--contact-form--input-padding-left: 16px; --jetpack--contact-form--font-size: 16.8px; --jetpack--contact-form--font-family: Inter, sans-serif; --jetpack--contact-form--line-height: 26.04px; --jetpack--contact-form--button-primary--color: rgb(249, 249, 249); --jetpack--contact-form--button-primary--background-color: rgb(17, 17, 17); --jetpack--contact-form--button-primary--border: 0px none rgb(17, 17, 17); --jetpack--contact-form--button-primary--border-color: rgb(17, 17, 17); --jetpack--contact-form--button-outline--padding: 9.6px 16px; --jetpack--contact-form--button-outline--border: 0px solid rgb(17, 17, 17); --jetpack--contact-form--button-outline--background-color: rgb(17, 17, 17); --jetpack--contact-form--button-outline--background-color-fallback: rgb(17, 17, 17); --jetpack--contact-form--button-outline--border-size: 0px; --jetpack--contact-form--button-outline--border-radius: 5.28px; --jetpack--contact-form--button-outline--text-color: rgb(249, 249, 249); --jetpack--contact-form--button-outline--line-height: 22.32px;">
+                <form th:action="@{/login}" method="post"
+                      class="contact-form commentsblock wp-block-jetpack-contact-form"
+                      aria-label="The Art of Connection" novalidate="">
+
+                    <div class="wp-block-jetpack-contact-form is-style-outlined">
+                        <div class="contact-form__inset-label-wrap">
+
+                            <div style="--jetpack--contact-form--border-radius: 5px;"
+                                 class="grunion-field-email-wrap grunion-field-wrap">
+                                <input type="text" name="username" id="gblock-template-canvas-username" value class="text  grunion-field"
+                                       placeholder=" " required="" aria-required="true" style="border-radius: 5px;">
+
+                                <div class="notched-label">
+                                    <div class="notched-label__leading"></div>
+                                    <div class="notched-label__notch">
+                                        <label for="gblock-template-canvas-username" class="notched-label__label "
+                                               style="line-height: 1;">Логин<span class="grunion-label-required"
+                                                                                  aria-hidden="true"></span></label>
+                                    </div>
+                                    <div class="notched-label__trailing"></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="contact-form__inset-label-wrap">
+
+                            <div style="--jetpack--contact-form--border-radius: 5px;"
+                                 class="grunion-field-email-wrap grunion-field-wrap">
+                                <input type="text" name="password"
+                                       id="gblock-template-canvas-password" value class="text  grunion-field" placeholder=" " required=""
+                                       aria-required="true" style="border-radius: 5px;-webkit-text-security: disc;text-security: disc;">
+
+                                <div class="notched-label">
+                                    <div class="notched-label__leading"></div>
+                                    <div class="notched-label__notch">
+                                        <label for="gblock-template-canvas-password" class="notched-label__label "
+                                               style="line-height: 1;">Пароль<span class="grunion-label-required"
+                                                                                   aria-hidden="true"></span></label>
+                                    </div>
+                                    <div class="notched-label__trailing"></div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="wp-block-jetpack-button aligncenter wp-block-button" style="max-width: 100%">
+                            <button class="wp-block-button__link" style="width: ; max-width: 100%"
+                                    data-id-attr="placeholder" type="submit">Вход
+                            </button>
+                        </div>
+                    </div>
+                    <input type="hidden" id="_wpnonce" name="_wpnonce" value="7da1926760"><input type="hidden"
+                                                                                                 name="_wp_http_referer"
+                                                                                                 value="/">
+                    <input type="hidden" name="contact-form-id" value="block-template-canvas">
+                    <input type="hidden" name="action" value="grunion-contact-form">
+                    <input type="hidden" name="contact-form-hash" value="913b3f8a449d048c2ef4b32329409dbc1ae2e8a9">
+                    <p style="display: none !important;" class="akismet-fields-container" data-prefix="ak_">
+                        <label>Δ<textarea name="ak_hp_textarea" cols="45" rows="8"
+                                          maxlength="100"></textarea></label><input type="hidden" id="ak_js_1"
+                                                                                    name="ak_js" value="1720886956271">
+                        <script>
+                            document.getElementById( "ak_js_1" ).setAttribute( "value", ( new Date() ).getTime() );
+                        </script>
+                    </p>
+                </form>
+            </div>
+        </div>
 
     </div>
 
